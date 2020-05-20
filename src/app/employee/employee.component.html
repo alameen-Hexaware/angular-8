@@ -1,5 +1,5 @@
 <p>employee works!</p>
-
+Welcome {{username}}
 <h1> REACTIVE FORM</h1>
 <form [formGroup]="empForm" (ngSubmit)="empfun()">
     Emp Id : 
@@ -21,3 +21,6 @@
 Enter the email : <input type="text" [formControl]="email"/><br/>
 Your email is : {{email.value}}<br/>
 <button (click)="updateEmail()">Click here to update email</button>
+
+<br>
+<a routerLink="/home">Home</a><br>

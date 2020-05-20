@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
   
     this.user = loginform.value.username;
 
+    localStorage.setItem("user",this.user);
+    
     console.log("User Name: "+this.user);
     if(this.user == "ameen"){
       this.router.navigate(["/empl"]);

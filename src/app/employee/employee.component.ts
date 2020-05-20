@@ -10,7 +10,10 @@ export class EmployeeComponent implements OnInit {
 
   constructor() { }
 
+  username:string;
+
   ngOnInit(): void {
+    this.username = localStorage.getItem("user");
   }
 
   email = new FormControl('');

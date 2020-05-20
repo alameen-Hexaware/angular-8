@@ -7,19 +7,23 @@ import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const route: Routes = [
   { path: "", redirectTo: "home" , pathMatch:"full" },
   { path: "login", component: LoginComponent },
   { path: "empl", component: EmployeeComponent },
   { path: "home", component: HomeComponent },
+  { path: "**", component: PagenotfoundComponent }
 ]
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
