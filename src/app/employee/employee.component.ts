@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -8,12 +9,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private actRoute:ActivatedRoute) { }
 
   username:string;
+  uname : string;
 
   ngOnInit(): void {
     this.username = localStorage.getItem("user");
+    this.uname = this.actRoute.snapshot.params["uname"];
   }
 
   email = new FormControl('');

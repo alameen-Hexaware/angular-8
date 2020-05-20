@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     
     console.log("User Name: "+this.user);
     if(this.user == "ameen"){
-      this.router.navigate(["/empl"]);
+      this.router.navigate(["/empl",this.user]);
     }else{
       console.log("Invalid User");
       this.user = '';

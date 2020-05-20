@@ -13,6 +13,7 @@ const route: Routes = [
   { path: "", redirectTo: "home" , pathMatch:"full" },
   { path: "login", component: LoginComponent },
   { path: "empl", component: EmployeeComponent },
+  { path: "empl/:uname", component: EmployeeComponent },
   { path: "home", component: HomeComponent },
   { path: "**", component: PagenotfoundComponent }
 ]
