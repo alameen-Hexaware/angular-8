@@ -1,0 +1,23 @@
+<p>employee works!</p>
+
+<h1> REACTIVE FORM</h1>
+<form [formGroup]="empForm" (ngSubmit)="empfun()">
+    Emp Id : 
+    <input type="text" formControlName="eid"/>
+    <div style="color: red;" *ngIf="empForm.get('eid').touched && empForm.get('eid').invalid">
+        Employee Id is required and Minimum Length is 4 Char
+    </div>
+    <br/>
+    Emp Name : 
+    <input type="text" formControlName="ename"/>
+    <div style="color: red;" *ngIf="empForm.get('ename').touched && empForm.get('ename').invalid">
+        Employee Name is required
+    </div>
+    <br/>
+    <input type="submit" value="Login">
+</form>
+
+<br>
+Enter the email : <input type="text" [formControl]="email"/><br/>
+Your email is : {{email.value}}<br/>
+<button (click)="updateEmail()">Click here to update email</button>

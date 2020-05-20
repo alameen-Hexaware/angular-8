@@ -1,0 +1,24 @@
+Welcome to Angular World
+
+<br/>
+{{title}}
+
+<br/>
+
+Employee Name : {{empName}} <br/>
+Employee Id : {{empId}} <br/>
+
+{{projectId}} <br/>
+
+<div *ngFor='let emp of employeeDetails'>
+  {{emp.eid}}
+  {{emp.ename}}
+  {{emp.email}}
+</div>
+
+<br/>
+
+
+<!-- <app-login> </app-login> -->
+<router-outlet></router-outlet>
+<!-- <app-employee></app-employee> -->
