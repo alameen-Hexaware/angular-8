@@ -8,13 +8,17 @@ import { EmployeeComponent } from './employee/employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ViewemployeeComponent } from './viewemployee/viewemployee.component';
+import { ProductComponent } from './product/product.component';
 
 const route: Routes = [
-  { path: "", redirectTo: "home" , pathMatch:"full" },
+  { path: "", redirectTo: "product" , pathMatch:"full" },
   { path: "login", component: LoginComponent },
   { path: "empl", component: EmployeeComponent },
   { path: "empl/:uname", component: EmployeeComponent },
+  { path: "viewemp/:ename/:eid", component: ViewemployeeComponent },  
   { path: "home", component: HomeComponent },
+  { path: "product", component: ProductComponent }, 
   { path: "**", component: PagenotfoundComponent }
 ]
 
@@ -24,7 +28,9 @@ const route: Routes = [
     LoginComponent,
     EmployeeComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ViewemployeeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
