@@ -1,0 +1,18 @@
+<h1>
+  ProductDetails
+</h1>
+
+  <table>
+    <tr>
+      <td>UserId</td>
+      <td>Id</td>
+      <td>Title</td>
+      <td>Body</td>
+    </tr>
+    <tr *ngFor="let item of prodt">
+      <td>{{item.userId}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.body}}</td>
+    </tr>
+  </table>

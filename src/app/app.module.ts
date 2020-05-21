@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ViewemployeeComponent } from './viewemployee/viewemployee.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailsComponent } from './ProductDetails/ProductDetails.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectComponent } from './Project/Project.component';
 
 const route: Routes = [
   { path: "", redirectTo: "product" , pathMatch:"full" },
@@ -19,27 +22,34 @@ const route: Routes = [
   { path: "viewemp/:ename/:eid", component: ViewemployeeComponent },  
   { path: "home", component: HomeComponent },
   { path: "product", component: ProductComponent }, 
+  { path: "productDetails", component: ProductDetailsComponent }, 
+  { path: "project", component: ProjectComponent }, 
   { path: "**", component: PagenotfoundComponent }
 ]
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    EmployeeComponent,
-    HomeComponent,
-    PagenotfoundComponent,
-    ViewemployeeComponent,
-    ProductComponent
-  ],
-  imports: [
-    BrowserModule,
-    // AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(route),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      LoginComponent,
+      EmployeeComponent,
+      HomeComponent,
+      PagenotfoundComponent,
+      ViewemployeeComponent,
+      ProductComponent,
+      ProductDetailsComponent,
+      ProjectComponent
+   ],
+   imports: [
+      BrowserModule,
+      //AppRoutingModule,
+      FormsModule,
+      ReactiveFormsModule,
+      RouterModule.forRoot(route),
+      HttpClientModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
